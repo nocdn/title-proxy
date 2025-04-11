@@ -27,7 +27,7 @@ docker build -t title-proxy-service .
 Run the Docker container:
 
 ```bash
-docker run -d --name title-proxy -p 8030:8000 title-proxy-service
+docker run -d --restart=always --name title-proxy -p 8030:8000 title-proxy-service
 ```
 
 (The `-d` flag runs the container in detached mode (so it runs in the background), and `-p 8030:8000` maps port 8000 in the container to port 8030 on your host machine. You can change the port mapping as needed to have this service accessible from other ports. The `--name` flag gives the container a name for easier management.)
